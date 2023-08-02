@@ -31,7 +31,13 @@ public class Toy {
         this.drop = drop;
     }
 
-    public void addToy(){
-
+    @Override
+    public String toString() {
+        return "Toy{" +
+                "idToy=" + idToy +
+                ", nameToy='" + nameToy + '\'' +
+                ", quantity=" + quantity +
+                ", drop=" + drop +
+                '}';
     }
 }
