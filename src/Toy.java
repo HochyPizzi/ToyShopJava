@@ -2,9 +2,9 @@ public class Toy {
     int idToy;
     String nameToy;
     int quantity;
-    float drop;
+    double drop;
 
-    public Toy(int idToy, String nameToy, int quantity, float drop) {
+    public Toy(int idToy, String nameToy, int quantity, double drop) {
         this.idToy = idToy;
         this.nameToy = nameToy;
         this.quantity = quantity;
@@ -23,12 +23,16 @@ public class Toy {
         return quantity;
     }
 
-    public float getDrop() {
+    public double getDrop() {
         return drop;
     }
 
-    public void setDrop(float drop) {
+    public void setDrop(double drop) {
         this.drop = drop;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
     @Override

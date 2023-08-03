@@ -1,20 +1,26 @@
-import java.util.ArrayList;
-import java.util.List;
+
 
 public class Main {
     public static void main(String[] args) {
+        ToyStore toyStore = new ToyStore();
+        toyStore.addToy(1, "Teddy Bear", 10, 10);
+        toyStore.addToy(2, "Car", 5, 20);
+        toyStore.addToy(3, "Doll", 7, 15);
 
-//        List<Toy> toys = new ArrayList<>();
-//        Toy toy1 = new Toy(0, "Rabbit", 1, 10);
-//        Toy toy2 = new Toy(1, "Fox", 1, 15);
-//        Toy toy3 = new Toy(2, "Horse", 1, 5);
-//        Toy toy4 = new Toy(3, "Bear", 1, 20);
-//        Toy toy5 = new Toy(4, "Sheep", 1, 1);
-//        toys.add(toy1);
-//        toys.add(toy2);
-//        toys.add(toy3);
-//        toys.add(toy4);
-//        toys.add(toy5);
+        System.out.println("Available toys:");
+        for (Toy toy : toyStore.getToys()) {
+            System.out.println(toy.getNameToy() + " - " + toy.getQuantity() + " pcs");
+        }
+
+        toyStore.updateWeight(1, 5);
+
+        String winnerToy = toyStore.drawToy();
+        System.out.println("The winner is: " + winnerToy);
+
+        System.out.println("Updated available toys:");
+        for (Toy toy : toyStore.getToys()) {
+        System.out.println(toy.getNameToy() + " - " + toy.getQuantity() + " pcs");
+        }
 
     }
 }
